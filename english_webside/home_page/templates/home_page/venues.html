@@ -1,0 +1,18 @@
+{% extends 'home_page/index.html' %}
+
+{% block title %}
+DailyQuest Strona domowa
+{% endblock %}
+
+{% block content %}
+<center>
+    <div>
+        <h1>Venues...</h1><br>
+        {% for venue in venue_list %}
+            <a href="{% url 'show-venue' venue.id %}">{{ venue }}</a> <br>
+        {% endfor %}
+    </div>
+</center>
+
+
+{% endblock %}

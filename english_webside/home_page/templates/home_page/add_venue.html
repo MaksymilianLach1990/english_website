@@ -1,0 +1,26 @@
+{% extends 'home_page/index.html' %}
+
+{% block title %}
+DailyQuest Strona domowa
+{% endblock %}
+
+{% block content %}
+<center>
+    <div class="container">
+      <h1>Add Venue To DataBase</h1>
+      <br/><br/>
+      {% if submitted %}
+        <h2><strong>Your Venue Was Submitted Succefully</strong></h2>
+
+      {% else %}
+        <form action="" method=POST>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+      {% endif %}
+    </div>
+</center>
+
+
+{% endblock %}
