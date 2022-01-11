@@ -2,42 +2,10 @@ from django.shortcuts import render
 import calendar
 from calendar import HTMLCalendar
 from datetime import datetime
-from .models import Event, Venue
-from .forms import VenueForm
-from django.http import HttpResponseRedirect
+from .models import Event
+
 # Create your views here.
 
-def all_events(request):        
-    event_list = Event.objects.all()
-    return render(request, 'home_page/events.html', {
-        'event_list': event_list
-    })
-
-def list_venue(request):
-    venue_list = Venue.objects.all()
-    return render(request, 'home_page/venues.html', {
-        'venue_list': venue_list
-    })
-
-def show_venue(request, venue_id):
-    venue = Venue.objects.get(pk=venue_id) # pk= pobieranie primery key
-    return render(request, 'home_page/show_venue.html', {
-        'venue': venue
-    })
-    
-
-def add_venue(request):
-    submitted = False
-    if request.method == "POST":
-        form = VenueForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/add_venue?submitted=True')
-    else:
-        form = VenueForm
-        if 'submitted' in request.GET:
-            submitted = True
-        return render(request, 'home_page/add_venue.html', {'form': form, 'submitted': submitted})
 
 
 def home(request):
@@ -47,6 +15,7 @@ def contact(request):
     return render(request, 'home_page/contact.html', {})
 
 def calendars(request, year=datetime.now().year, month=datetime.now().strftime('%B')):
+    events = Event.objects.all() # lista aktualności na stronie 
     year = int(year)
     name = "Kris"
     month = month.capitalize()
@@ -71,5 +40,6 @@ def calendars(request, year=datetime.now().year, month=datetime.now().strftime('
         "cal": cal,
         "current_year": current_year,
         "time": time,
+        "events": events
     })
 
