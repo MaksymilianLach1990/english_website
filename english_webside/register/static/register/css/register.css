@@ -1,0 +1,11 @@
+#form {
+    border: 2px solid;
+    border-color: darkgreen;
+    margin-top: 60px;
+    background-color: lightgrey;
+}
+
+div form {
+    text-align: left;
+    padding: 5%;
+}

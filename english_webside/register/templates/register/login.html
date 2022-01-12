@@ -1,12 +1,18 @@
 {% extends 'home_page/index.html' %}
 
+{% load static %}
+
 {% block title %}
 DailyQuest Login
 {% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'register/css/login.css' %}">
+{% endblock %}
+
 {% block content %}
 <center>
-    <div style="width: 50%;">
+    <div class="form">
 
         <h1>Login</h1>
         <br><br>
