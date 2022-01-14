@@ -1,0 +1,10 @@
+.img-fluid {
+    height: 100%;
+}
+
+
+.row {
+    height: 100%;
+    max-width: 640px;
+    
+}
