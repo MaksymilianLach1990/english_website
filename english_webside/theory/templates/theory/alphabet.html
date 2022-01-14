@@ -14,37 +14,36 @@ DailyQuest Teoria Alfabet
 <h1>Alfabet Angielski</h1>
 <div class="container">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div>
-        <p>Tabela przedstawia 26 liter używanych w języku angielskim, <br>wygląd dużych i małych liter oraz wymowę fonetyczną.</p>
-        <table>
+      <div>
+        <p>Tabela przedstawia 26 liter używanych w języku angielskim, <br>wygląd dużych i małych liter oraz wymowę fonetyczną.</p><br>
+        <table class="table">
             <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Duża litera</th>
+                        <th>Mała litera</th>
+                        <th>Wymowa</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for letter in letters %}
                 <tr>
-                    <th>#</th>
-                    <th>Duża litera</th>
-                    <th>Mała litera</th>
-                    <th>Wymowa</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for letter in letters %}
-            <tr>
-                {% for sign in letter %}
-                <td>{{ sign }}</td>
+                    {% for sign in letter %}
+                    <td>{{ sign }}</td>
+                    {% endfor %}
+                    
+                </tr>      
                 {% endfor %}
-                
-            </tr>
-            
-            
-            {% endfor %}
-        </tbody>
-    </table>
-    </div>
-    <div>
+            </tbody>
+        </table>
+      </div>
+
+      <div>
         <p>Dodatek: <br>Alfabet ze słowami używanymi przez NATO do literowania,<br>i alfabet Morsa uniwersalny na całym świecie.
             <br><a href="https://www.youtube.com/watch?v=f28fAVRL5Jg">A tu filmik z wymową</a></p>
         
         <img src="{% static 'theory/images/alphabet.jfif' %}" alt="">
+      </div>
     </div>
-</div>
 </div>
 {% endblock %}

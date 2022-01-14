@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def load_alphabet(plik):
+def load_info(plik):
     with open(plik, 'rb') as f:
         text = f.readlines()
         letters = []
@@ -11,6 +11,8 @@ def load_alphabet(plik):
             letters.append(line)
         
         return letters
+
+
 
 # print(load_alphabet('english_webside/theory/alphabet.txt'))
 
@@ -21,11 +23,15 @@ def phonetics(request):
     return render(request, 'theory/phonetics.html', {})
 
 def alphabet(request):
-    letters = load_alphabet('theory/alphabet.txt')
+    letters = load_info('theory/information/alphabet.txt')
     return render(request, 'theory/alphabet.html', {'letters': letters})
 
 def numbers(request):
-    return render(request, 'theory/numbers.html', {})
+    numbers = load_info('theory/information/numbers.txt')
+    return render(request, 'theory/numbers.html', {'numbers': numbers})
+
+def time(request):
+    return render(request, 'theory/present.html', {})
 
 def present(request):
     return render(request, 'theory/present.html', {})
