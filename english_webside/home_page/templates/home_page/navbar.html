@@ -36,8 +36,16 @@
       <a class="nav-link" href="#">Nauka poprzez zabawę</a>
     </li>
     {% if user.is_authenticated %}    
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Nazwa użytkownika
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Profil</a></li>
+        <li><a class="dropdown-item" href="#">Opcje konta</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+      </ul>
     </li>
     {% else %}
     <li class="nav-item">
