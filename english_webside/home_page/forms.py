@@ -4,6 +4,8 @@ from .models import Event
 
 
 
+
+
 # #create Venue Form
 # class VenueForm(ModelForm):
 #     # Meta musi być nie zostało wyjaśnione co robi

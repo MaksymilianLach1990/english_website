@@ -24,11 +24,6 @@
         <li><a class="dropdown-item" href="{% url 'future' %}">Future</a></li>
       </ul>
     </li>
-    {% if user.is_authenticated %}
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'daily-quest' %}">DailyQuest</a>
-    </li>
-    {% endif %}
     <li class="nav-item">
       <a class="nav-link" href="#">Techniki skutecznej nauki</a>
     </li>
@@ -36,9 +31,12 @@
       <a class="nav-link" href="#">Nauka poprzez zabawę</a>
     </li>
     {% if user.is_authenticated %}    
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'daily-quest' %}"><strong>DailyQuest</strong></a>
+    </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Nazwa użytkownika
+        <strong>{{ user.username }}</strong>
       </a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" href="#">Profil</a></li>
@@ -49,15 +47,13 @@
     </li>
     {% else %}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'register-user' %}">Rejestracja</a>
+      <a class="nav-link" href="{% url 'register-user' %}"><strong>Rejestracja</strong></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %}">Login</a>
+      <a class="nav-link" href="{% url 'login' %}"><strong>Login</strong></a>
     </li>
     {% endif %}
     <li class="nav-item">
       <a class="nav-link" href="{% url 'contact' %}">Kontakt</a>
-    </li>
-   
-    
-  </ul>
+    </li> 
+</ul>

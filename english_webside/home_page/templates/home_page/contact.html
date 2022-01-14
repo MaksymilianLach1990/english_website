@@ -1,10 +1,63 @@
 {% extends 'home_page/index.html' %}
 
+{% load static %}
+
 {% block title %}
 DailyQuest Kontakt
 {% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'home_page/css/contact.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Kontak do twórcy strony</h1>
+<br>
+<h1>Kontakt do twórcy strony</h1>
+<br>
 <h3>Jeśli masz jakieś pytania to śmiało wypełnij pola poniżej i naciśnij magiczny przycisk 'Wyślij'.</h3>
+<br><br>
+
+<div class="row">
+    <div class="col-12 col-md-4">
+        <div class="contact-information">
+            
+            <p><Strong>Krzysztof</Strong></p>
+            
+            <p><strong>Lach</strong></p>
+            <br>
+            <h5>email:</h5>
+            <p><strong>lachkrzysztof56@gmail.com</strong></p>
+            
+        </div>
+    </div>
+    <div class="col-12 col-md-8">
+        <div class="contact-form">     
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <div id="form" class="row">
+                    <div class="col-lg-6">
+                        <input id="fields" type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                    </div>
+                    <br>
+                    <div class="col-lg-6">
+                        <input id="fields" type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <textarea id="text" name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                    </div>
+                    <br><br>
+                    <div class="col-12">
+                        <button id="button" type="submit" class="btn dento-btn">Wyślij</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+</div>
+
+
 {% endblock %}
