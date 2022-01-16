@@ -6,9 +6,41 @@
 DailyQuest Teoria Czasowniki
 {% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'theory/css/verbs.css' %}">
+{% endblock %}
+
 {% block theory %}
-<h1>Czasowniki nieregularne</h1>
+<h1>Czasowniki nieregularne - Irregular Verb</h1>
 <div class="container">
-    <p>Czasowniki nieregularne których trzeba się nauczyć na pamięć</p>
+    <br>
+    <h6>Czasowniki nieregularne których trzeba się nauczyć na pamięć</h6>
+    <br>
+    <table class="verb">
+        <thead>
+            <td>Present <br>Czas teraźniejszy</td>
+            <td class="verb_spell_3"></td>
+            <td>Pass <br>II forma czasownika</td>
+            <td class="verb_en_2"></td>
+            <td>Pass participle <br>III forma czasownika</td>
+            <td class="verb_spell_1"></td>
+            <td>Słowo</td>
+        </thead>
+        <tbody>
+            {% for verb in irregular_verb %}
+            <tr>
+                <td class="verb_en_1">{{ verb.name_en_1 }}</td>
+                <td class="verb_spell_1">{{ verb.spell_1 }}</td>
+                <td class="verb_en_2">{{ verb.name_en_2 }}</td>
+                <td class="verb_spell_2">{{ verb.spell_2 }}</td>
+                <td class="verb_en_3">{{ verb.name_en_3 }}</td>
+                <td class="verb_spell_3">{{ verb.spell_3 }}</td>              
+                <td class="verb_pl">{{ verb.name_pl }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table>
+    </table>
 </div>
 {% endblock %}

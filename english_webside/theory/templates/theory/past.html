@@ -6,9 +6,103 @@
 DailyQuest Teoria Przeszłość
 {% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'theory/css/theory_time.css' %}">
+{% endblock %}
+
 {% block theory %}
 <h1>Czas przeszły</h1>
 <div class="container">
-    <p></p>
+    <section>
+        <div class="header">
+            <br>
+            <h3 id="times">W angielskim wyróżniamy 4 czasy przeszłe:</h3>
+            <br>
+            <ol>
+                <li>Past Simple</li>
+                <li>Past Continuous</li>
+                <li>Past Perfect</li>
+                <li>Past Perfect Continuous</li>
+            </ol>
+        </div>
+    </section>
+    <br><br>
+    <section>
+        <div class="title">
+            <h2> Past Simple </h2>
+            <p>Czas przeszły prosty</p>
+            <br>
+        </div>
+        <div class="basic">
+            <h4>Używamy, gdy mówimy o:</h4><br>
+            <ul>
+                <li class="basic-row">Czynnościach przeszłych, zaczętych i zakończonych w znanym nam czasie w przeszłości. <br>
+                    <strong>I watched a good movie yesterday .</strong>- Wczoraj obejrzałem dobry film. <br>
+                    <strong>Zdanie</strong>- .</li>
+                <br>
+                <li class="basic-row">Czynnościach następujących po sobie. <br>
+                    <strong>I got up, took a shower and ate breakfast.</strong>- Wstałem, wziąłem prysznic i zjadłem śniadanie. <br>
+                    <strong>Zdanie</strong></li>
+                <br>
+            </ul>
+            <div class="basic-tobe">
+                <h4>Czasownik "TO BE"</h4>
+                <p>W czasie przeszłym czasownik <strong>"to by"</strong> ma formę <strong>"was/were". [wɒz/wɜː(r)]</strong></p>
+                <div class="grid-tobe">
+                    <p><strong>I was</strong> - Byłem</p> 
+                    <p><strong>You were</strong> - Byłeś</p> 
+                    <p><strong>He was</strong> - Był</p> 
+                    <p><strong>She was</strong> - Była</p>
+                    <p><strong>It was</strong> - Było</p>
+                    <p><strong>We were</strong> - Byliśmy</p>
+                    <p><strong>You were</strong> - Byliście</p>
+                    <p><strong>They were</strong> - Byli</p>
+                </div>
+                <br>
+                <p>Aby utworzyć przeczenie do czasownika <strong>"to be"</strong> w czasie przeszłym, dodajemy <strong>"not"</strong></p>
+                <p><strong>She was not (wasn't) there.</strong> - Nie było jej tam.</p>
+                <p><strong>They  were not (weren't) in the cinema yesterday.</strong> - Oni wczoraj nie byli w kinie.</p>
+                <br>
+                <p>Pytanie tworzymy poprzez inwersję.</p>
+                <p><strong>Was she at home?</strong> - Czy ona była w domu?</p>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h5>Zdanie twierdzące</h5>
+            <p>W języku angielskim wystęoują czasowniki regularne i <a href="#">nieregularne</a>. <br>
+                Jeśli tworzymy zdanie w czasie przeszłym z czasownikiem regularnym, to dodajemy do niego końcówkę <strong>-ed</strong>.
+                </p><br>
+            <p><strong>You played well.</strong>- Dobrze grałeś.</p>
+            <p><strong>Zdanie</strong></p>
+            <br>
+            <p>Gdy czasowniki są zakończone na <strong>-e</strong>, to dodajemy samo <strong>-d</strong>.</p>
+            <p><strong>love - loved</strong></p><br>
+
+            <p>Gdy czasowniki kończą się na literę <strong>-y</strong> poprzedzoną spółgłoską, to przed dodaniem końcówki, <strong>-y</strong> zamienia się na <strong>-i</strong>.</p>
+            <p><strong>try - tried</strong></p><br>
+
+            <p>Gdy czasownik jednosylabowy jest zakończony na pojedynczą spółgłoskę poprzedzoną pojedynczą samogłoską, to ta ostatnia spółgłoska jest podwajana przed dodaniem końcówki.</p>
+            <p><strong>stop - stopped</strong></p><br>
+
+            <p>Jeśli czasownik jest nieregularny, to używamy drugiej formy z trzech form czasownika. <br>
+                Tabele z najważniejszymi czasownikami  nieregularnymi znajdziesz <strong><a href="#">Tutaj</a></strong></p>
+            <br>
+
+            <h5>Pytanie</h5>
+            <p>Pytanie tworzymy poprzez użycie operatora <strong>"did" [dɪd]</strong> przed podmiotem.</p>
+            <p><strong>Why did she go out?</strong>- Czemu ona wyszła?</p>
+            <p><strong>Zdanie?</strong>- ?</p><br>
+            
+
+            <h5>Przeczenie</h5>
+            <p>Przeczenia tworzymy poprzez użycie operatora <strong>"did not" (didn't)</strong>. <br>
+                Czasownik występuje wtedy w swojej podstawowej formie. 
+                </p>
+            <p><strong>She didn't go with us.</strong>- Ona z nami nie poszła.</p>
+            <p><strong>Zdanie.</strong>- .</p><br>
+            
+        </div>
+    </section>
 </div>
 {% endblock %}

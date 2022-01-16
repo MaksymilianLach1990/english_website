@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import IrregularVerb
 
 # Create your views here.
 
@@ -24,11 +25,15 @@ def phonetics(request):
 
 def alphabet(request):
     letters = load_info('theory/information/alphabet.txt')
-    return render(request, 'theory/alphabet.html', {'letters': letters})
+    return render(request, 'theory/alphabet.html', {
+        'letters': letters
+        })
 
 def numbers(request):
     numbers = load_info('theory/information/numbers.txt')
-    return render(request, 'theory/numbers.html', {'numbers': numbers})
+    return render(request, 'theory/numbers.html', {
+        'numbers': numbers
+        })
 
 def time(request):
     return render(request, 'theory/present.html', {})
@@ -43,4 +48,7 @@ def future(request):
     return render(request, 'theory/future.html', {})
 
 def irregular_verb(request):
-    return render(request, 'theory/irregular_verb.html', {})
+    irregular_verb = IrregularVerb.objects.all()
+    return render(request, 'theory/irregular_verb.html', {
+        'irregular_verb': irregular_verb
+        })
