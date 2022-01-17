@@ -1,0 +1,13 @@
+tr, th, td {
+    padding: 10px;
+    margin: 10px;
+}
+.table {
+    color: blue;
+}
+
+.numbers {
+    color: blue;
+    padding: 10px;
+    margin: 10px;
+}

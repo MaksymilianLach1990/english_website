@@ -1,0 +1,185 @@
+{% extends 'theory/theory_start.html' %}
+
+{% load static %}
+
+{% block title %}
+DailyQuest Teoria Cyfry i Liczebniki
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'theory/css/numbers.css' %}">
+{% endblock %}
+
+{% block theory %}
+<br>
+<div class ="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <div>
+            <table class="table">
+                <h3>Cyfry - wymowa i pisownia</h3><br><br>
+                <thead>
+                    <th>Cyfra</th>
+                    <th>Pisownia</th>
+                    <th>Wymowa</th>
+                </thead>
+                {% for number in numbers %}
+                <tr>
+                    {% for cell in number %}
+                    <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+                
+                {% endfor %}
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h3>Liczebniki porzątkowe</h3><br>
+            <div>
+                <img src="{% static 'theory/images/numbers.jpg' %}" width="600" height="350">
+            </div>
+            <div>
+                <h5>Liczebniki porządkowe niemal zawsze poprzedzone są przedimkiem <strong>„the” [ðə]</strong></h5><br>
+                
+                <table>
+                    <br>
+                    <h6>Pierwsze trzy są wyjątkami</h6>
+                    <br>
+                    <tbody class="numbers">
+                        <tr>
+                            <td>1st</td>
+                            <td>the first</td>
+                            <td>[fɜːst]</td>
+                            <td>pierwszy</td>
+                        </tr>
+                        <tr>
+                            <td>2nd</td>
+                            <td>the second</td>
+                            <td>['sekənd]</td>
+                            <td>drugi</td>
+                        </tr>
+                        <tr>
+                            <td>3rd</td>
+                            <td>the third</td>
+                            <td>[θɜːd]</td>
+                            <td>trzeci</td>
+                        </tr>        
+                    </tbody>
+                </table>
+                <br>
+                <h6>Do pozostałych stosujemy regułę, która polega na dodaniu na końcu <strong>"th"</strong></h6>
+                <br>
+                <table class="numbers">
+                    <tr>
+                        <td>4th</td>
+                        <td> the fourth</td>
+                        <td>[fɔːθ]</td>
+                        <td>czwarty</td>
+                    </tr>
+                    <tr>
+                        <td>5th</td>
+                        <td>the fifth</td>
+                        <td>[fɪfθ]</td>
+                        <td>piąty</td>
+                    </tr>
+                    <tr>
+                        <td>6th</td>
+                        <td>the sixth</td>
+                        <td>[sɪk(s)θ]</td>
+                        <td>szósty</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div>
+                <br>
+                <h6>W kolejnych liczebnikach zawierających człony „pierwszy”, „drugi” i „trzeci” używamy zawsze <br> 
+                    powyższych form porządkowych, zaś pozostałe liczebniki są tworzone poprzez dodanie <br>
+                    końcówki „-th” (w przypadku liczb powyżej dwudziestu, tylko do ostatniego członu). Liczebniki <br>
+                    typu 21, 32, 43, 54 wyglądają zatem następująco: <br>
+                </h6>
+                <br>
+                <table class="numbers">
+                    <tbody>
+                        <tr>
+                            <td>21st</td>
+                            <td>twenty-first</td>
+                            <td>['twenti]-[fɜːst]</td>
+                            <td>dwudziesty pierwszy</td>
+                        </tr>
+                        <tr>
+                            <td>32nd</td>
+                            <td>thirty-second</td>
+                            <td>['θɜːti]-['sekənd]</td>
+                            <td>trzydziesty drugi</td>
+                        </tr>
+                        <tr>
+                            <td>43rd</td>
+                            <td>forty-third</td>
+                            <td>['fɔːti]-[θɜːd]</td>
+                            <td>czterdziesty trzeci</td>
+                        </tr>
+                        <tr>
+                            <td>54th</td>
+                            <td>fifty-fourth</td>
+                            <td>['fɪfti]-[fɔːθ]</td>
+                            <td>pięćdziesiąty czwarty</td>
+                        </tr>
+                        <tr>
+                            <td>65th</td>
+                            <td>sixty-fifth</td>
+                            <td>['sɪksti]-[fɪfθ]</td>
+                            <td>sześćdziesiąty piąty</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <br><br>
+                <h3>Daty</h3>
+                <div>
+                    <img src="{% static 'theory/images/date.jpg' %}" width="300" height="300">
+                </div>
+                <br>
+                <h6>W piśmie daty najczęściej wyglądają następująco:</h6>
+                <table class="numbers">
+                    <tr>
+                        <td>12 July 1879</td>
+                        <td>lub</td>
+                        <td>12th July 1879</td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>10 December 1999</td>
+                        <td>lub</td>
+                        <td>10th December 1999</td>
+                    </tr>
+                </table>
+                <br>
+                <h6>W drugim przypadku wykorzystujemy liczebniki porządkowe.</h6>
+                <br><br>
+                <h6>W mowie daty rozwijamy następująco:</h6>
+                <br>
+                <table class="numbers">
+                    <tr>
+                        <td>1 September 2002</td>
+                        <td> - </td>
+                        <td>the first of September, two thousand and two</td>
+                    </tr>
+                    <tr>
+                        <td>6 June 1998</td>
+                        <td> - </td>
+                        <td>the sixth of June, nineteen ninety-eight</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

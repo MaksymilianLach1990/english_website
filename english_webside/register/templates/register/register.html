@@ -1,0 +1,38 @@
+{% extends 'home_page/index.html' %}
+
+{% load static %}
+
+{% block title %}
+DailyQuest Rejestracja
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'register/css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% if form.errors %}
+<br>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <p>Uwaga!! Nastąpił nieoczekiwany bład! Przepraszamy za utrudnienia!</p>
+    <p>Sprawdz wypełnione pola i spróbuj jeszcze raz.</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endif %}
+<div id="form" class="container">
+    <br>
+    <h1>Rejestracja</h1>
+
+    <form action="{% url 'register-user' %}" method=POST>
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        
+        
+        <br><input type="submit" value="Rejestracja" class="btn btn-secondary">
+        
+    </form>
+</div>
+
+{% endblock %}

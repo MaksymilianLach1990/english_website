@@ -1,0 +1,90 @@
+{% extends 'home_page/index.html' %}
+
+{% load static %}
+
+{% block title %}
+DailyQuest Teoria
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        {% include 'theory/navbar.html' %}
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Teoria rzecz ważna</h1>
+          <img src="{% static 'theory/images/theory.jpg' %}" alt="">
+        </div>
+        {% block theory %}
+
+        <div class="container" style="background-color: rgb(153, 222, 245); font-weight: bold;">
+          <h3>Kilka porad jak się uczyć</h3>
+          <ol>
+            <li>Zapoznaj się ze spisem treści i zobacz jak zbudowane są poszczególne działy.</li>
+            <br>
+            <li>Określ, czego i w jakim czasie chcesz się nauczyć. Musisz posiadać 
+              własny system nauki, aby ta stała się efektywna. Jeżeli będziesz uczył 
+              się np. dziennie 10 nowych słów, to po miesiącu będziesz znał ich już 
+              300, a po roku twoja znajomość słownictwa będzie naprawdę 
+              imponująca. Sam ustal dla siebie priorytety i zaplanuj naukę zgodnie 
+              z Twoim czasem i możliwościami.</li>
+            <br>
+            <li>Przy nauce słownictwa stosuj skojarzenia. Zapamiętywanie 
+              poszczególnych słówek przychodzi dużo łatwiej, gdy uruchomimy naszą 
+              wyobraźnię.</li>
+            <br>
+            <li>Stosuj powtórki. Powtarzanie materiału jest ważnym elementem 
+              nauki. Stwórz swój własny system i stosuj się do niego. Wyznaczaj 
+              kolejne terminy i staraj się ich przestrzegać. Pamiętaj, by nie 
+              przekładać daty powtórki na inny dzień. W miarę przesuwania 
+              zaplanowanych terimnów może okazać się, że ilość materiału jest tak 
+              obszerna, że nie znajdziesz motywacji by się do niego zabrać.</li>
+            <br>
+            <li>W wolnych chwilach wracaj do materiału, który już opanowałeś. 
+              Przeglądaj i czytaj teorię. Zabieg taki zajmie ci nie więcej niż kilka 
+              minut, a utrwali to, czego już się nauczyłeś.</li>
+            <br>
+            <li>Słówka i wyrażenia, które sprawiają ci problem, zapisz i wracaj do nich 
+              tylko wtedy, kiedy masz na to czas. Systematyczne powtarzanie ich 
+              spowoduje, że utrwalą ci się w pamięci.</li>
+            <br>
+            <li>Skoncentruj się na poprawnej wymowie. Jest to niezbędne do 
+              szybkiego opanowania języka obcego. Jej nieznajomość może 
+              spowodować złe przyzwyczajenia i późniejsze problemy z tym 
+              związane. Może okazać się, że nie rozumiesz dialogów i wypowiedzi 
+              mimo, że posiadasz niezbędny zasób słownictwa, gdyż wymowa 
+              poszczególnych treści jest inna niż ta, którą uważasz za właściwą.</li>
+            <br>
+            <li>Buduj własne zdania i teksty korzystając ze słówek. Zapisuj te zdania na 
+              kartce lub wypowiadaj na głos. Pozwoli ci to utrwalić słownictwo oraz 
+              przyzwyczai do wypowiedzi ustnych.</li>
+            <br>
+            <li>Podczas mówienia nie zwracaj uwagi na gramatykę. Ważne, abyś 
+              wypowiadał się płynnie i bez przerw. Poprawność gramatyczna 
+              przyjdzie sama z czasem. Ciągłe zastanawianie się „jak mam to 
+              powiedzieć” tylko Cię blokuje i zniechęca do dalszej nauki.</li>
+            <br>
+            <li>Kluczem do znajomości języka jest słownictwo. Żadne regułki 
+              gramatyczne nie uratują Cię, gdy zasób znanych przez Ciebie słów jest 
+              niewystarczający. Posiadając odpowiednią bazę słówek, jesteś w stanie 
+              odnaleźć się w każdej sytuacji i z każdym porozumieć. Nawet, jeśli 
+              skonstruujesz jakieś zdanie np. w niewłaściwym czasie, odbiorca i tak 
+              zrozumie sens Twojej wypowiedzi.</li>
+            <br>
+          </ol>
+        </div>
+
+        {% endblock %}
+      </main>
+    </div>
+  </div>
+  
+
+
+
+
+{% endblock %}

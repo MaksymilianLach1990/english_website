@@ -1,0 +1,72 @@
+{% extends 'theory/theory_start.html' %}
+
+{% load static %}
+
+{% block title %}
+DailyQuest Teoria Przyszłośc
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'theory/css/theory_time.css' %}">
+{% endblock %}
+
+{% block theory %}
+<h1>Czas przyszły</h1>
+<div class="container">
+    <section>
+        <div class="header">
+            <br>
+            <h3 id="times">W angielskim wyróżniamy 4 czasy przeszłe:</h3>
+            <br>
+            <ol>
+                <li>Future Simple</li>
+                <li>Future Continuous</li>
+                <li>Future Perfect</li>
+                <li>Future Perfect Continuous</li>
+            </ol>
+        </div>
+    </section>
+    <br><br>
+    <section>
+        <div class="title">
+            <h2>Future Simple</h2>
+            <p>Czas przeszły prosty</p>
+            <br>
+        </div>
+        <div class="basic">
+            <h4>Używamy, gdy mówimy o:</h4><br>
+            <ul>
+                <li class="basic-row">Podejmujemy spontaniczną decyzję.<br>
+                    <strong>Look! A nice girl is coming. I will talk to her.</strong>- Spójrz! Idzie fajna dziewczyna. Zadadam do niej. <br>
+                    <strong>Zdanie.</strong>- .</li>
+                <br>
+                <li class="basic-row">Obiecujemy, grozimy, prosimy. <br>
+                    <strong>Will you do that for me?</strong>- Czy zrobisz to dla mnie? <br>
+                    <strong>Zdanie</strong></li>
+                <br>
+                <li class="basic-row">Przewidujemy. <br>
+                    <strong>I thing she will come.</strong>- Myślę, ze ona przyjdzie. <br>
+                    <strong>Zdanie</strong></li>
+                <br>
+            </ul>
+        </div>
+
+        <div class="rules">
+            <h5>Zdanie twierdzące</h5>
+            <p>Zdanie twierdzące tworzymy poprzez uzycie operatora <strong>"will" [wɪl]</strong> oraz czasownika w formie podstawowej.</p>
+            <p><strong>I will (I'll) do that for you.</strong>- Zrobię to dla ciebie.</p>
+            <p><strong>Zdanie.</strong>- .</p><br>
+            
+            <h5>Pytanie</h5>
+            <p>Pytanie tworzymy poprzez inwersję.</p>
+            <p><strong>Will you marry me?</strong>- Czy wyjdziesz za mnie?</p>
+            <p><strong>Zdanie?</strong>- ?</p><br>
+            
+            <h5>Przeczenie</h5>
+            <p>Przeczenie tworzymy przez dodanie <strong>"not"</strong> po operatorze.</p>
+            <p><strong>They dont't like horses.</strong>- Oni nie lubią koni.</p>
+            <p><strong>She doesn't play video game.</strong>- Ona nie gra w gry wideo.</p><br>
+        </div>
+    </section>
+</div>
+{% endblock %}

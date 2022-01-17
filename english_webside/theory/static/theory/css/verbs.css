@@ -1,0 +1,53 @@
+td {
+    border: 3px solid;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.verb {
+    border: 5px solid;
+    font-weight: bold;
+    
+}
+
+.verb_spell_1 {
+    border-color: black;
+    /* background-color: lightblue; */
+    background-color: lightblue;
+}
+
+.verb_en_1 {
+    border-color: black;
+    /* background-color: lightblue; */
+    background-color: white;
+}
+
+.verb_spell_2 {
+    border-color: black;
+    /* background-color: lightgreen; */
+    background-color: rgb(255, 97, 97);
+}
+
+.verb_en_2 {
+    border-color: black;
+    background-color: lightgreen;
+
+}
+
+.verb_spell_3 {
+    border-color: black;
+    /* background-color: rgb(255, 198, 93); */
+    background-color: rgb(255, 198, 93);
+}
+
+.verb_en_3 {
+    border-color: black;
+    /* background-color: rgb(255, 198, 93);} */
+    background-color: yellow;
+}
+
+.verb_pl {
+    border-color: black;
+    background-color: rgb(224, 92, 131);
+}

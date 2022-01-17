@@ -1,0 +1,83 @@
+{% extends 'home_page/index.html' %}
+
+{% load static %}
+
+{% block title %}
+DailyQuest Strona domowa
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'home_page/css/home_page.css' %}">
+{% endblock %}
+
+{% block content %}
+<center>
+    <div>
+      <br><br>
+      <h2>Witaj na stronie promującej przyjemny sposób nauki języka angielskiego</h2>
+      <h5>Strona zawiera teorię i różne ćwiczenia oraz informacje które przydadzą ci się podczas nauki.</h5>
+      <h5>Poświęć czas na naukę codziennie i stwórz z tego dobry nawyk, a zobaczysz że efekty twojej pracy cię mile zaskoczą.</h5>
+      <br><br>
+    </div>
+    <div>
+        <div class="card mb-3" style="max-width: 640px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{% static 'home_page/images/theory_home.jpg' %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Teoria rzecz ważna</h5>
+                  <p class="card-text">Fonetyka, czasy, rzeczowniki nieregularne, przydatne zasady.</p>
+                  <p class="card-text"><small class="text-muted"><a href="{% url 'phonetics' %}">Więcej informacji</a></small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 640px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{% static 'home_page/images/daily-quest.png' %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">DailyQuest - czyli zadanie na każdy dzień</h5>
+                  <p class="card-text">Zarejestruj się i wykonuj codzienne zadania, a szybko zauważysz efekty.</p>
+                  <p class="card-text"><small class="text-muted"><a href="{% url 'login' %}">Login</a></small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 640px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{% static 'home_page/images/learning.jfif' %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Techniki skutecznej nauki</h5>
+                  <p class="card-text">Dowiedz się jak działa twoja pamięć i wykorzystaj to na swoją korzyść.</p>
+                  <p class="card-text"><small class="text-muted"><a href="#">Więcej informacji</a></small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 640px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{% static 'home_page/images/manga.jfif' %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Nauka poprzez zabawę</h5>
+                  <p class="card-text">Spraw aby nauka języka była przyjemna, a będzie efektywniejsza. Czytaj codziennie ciekawe historie i zaciągnij do pracy swoją wyobraźnię.</p>
+                  <p class="card-text"><small class="text-muted"><a href="#">Więcej informacji</a></small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+1,one,[wʌn]
+2,two,[tuː]
+3,three,[θriː]
+4,four,[fɔː(r)]
+5,five,[faɪv]
+6,six,[sɪks]
+7,seven,['sevən]
+8,eight,[eɪt]
+9,nine,[naɪn]
+10,ten,[ten]
+11,eleven,[ɪ'levən]
+12,twelve,[twelv]
+13,thirteen,[θɜː'tiːn]
+14,fourteen,[fɔː'tiːn]
+15,fifteen,[fɪf'tiːn]
+16,sixteen,[sɪk'stiːn]
+17,seventeen,['sevəntiːn]
+18,eighteen,[eɪ'tiːn]
+19,nineteen,[naɪn'tiːn]
+20,twenty,['twenti]
+21,twenty-one
+22,twenty-two
+23,twenty-three
+24,twenty-four
+25,twenty-five
+26,twenty-six
+27,twenty-seven
+28,twenty-eight
+29,twenty-nine
+30,thirty,['θɜːti]
+31,thirty-one
+32,thirty-two
+33,thirty-three
+40,forty,['fɔːti]
+50,fifty,['fɪfti]
+60,sixty,['sɪksti]
+70,seventy,['sevənti]
+80,eighty,['eɪti]
+90,ninety,['naɪnti]
+100,a hundred,['hʌndrəd]
+101,a hundred and one
+200,two hundred
+300,three hundred
+400,four hundred
+500,five hundred
+1000,a thousand,['θaʊzənd]
+10000,ten thousand
+1000000,a million,['mɪljən]
