@@ -2,7 +2,7 @@ from django.shortcuts import render
 import calendar
 from calendar import HTMLCalendar
 from datetime import datetime
-from .models import Event
+from .models import Event, UserMessage
 
 # Create your views here.
 
@@ -16,6 +16,8 @@ def contact(request):
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
         message = request.POST['message']
+        uMess = UserMessage(username=message_name, email=message_email, date_post=datetime.now(), text=message)
+        uMess.save()
         return render(request, 'home_page/contact.html', {'message_name': message_name})
 
     else:

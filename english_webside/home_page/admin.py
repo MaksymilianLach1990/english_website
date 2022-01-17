@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event
+from .models import Event, UserMessage
 
 # Register your models here.
 
@@ -25,3 +25,8 @@ from .models import Event
 class EventAdmin(admin.ModelAdmin):
     list_display = ('title', 'date_start', 'describe')
     ordering = ('date_start',)
+
+@admin.register(UserMessage)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('username', 'date_post')
+    ordering = ('date_post',)

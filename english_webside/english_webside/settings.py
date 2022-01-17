@@ -21,10 +21,10 @@ ROOT_PATH = os.path.dirname(__file__)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y)*&uci^nezwj%fh!u=)&7&xtjrdp%1d53sppd$znt@53e@+*3'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 

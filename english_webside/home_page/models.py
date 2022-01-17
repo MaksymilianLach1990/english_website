@@ -1,14 +1,21 @@
 from django.db import models
 from django.contrib.auth.models import User
+import datetime
 # Create your models here.
 
 class Event(models.Model):
     title = models.CharField('Title event', max_length=255, blank=True)
-    date_start = models.DateTimeField('Event data', null=True, blank=True)
+    date_start = models.DateField('Event data', null=True, blank=True)
     describe = models.TextField('Describe', null=True, blank=True)
 
     def __str__(self):
         return self.title
+
+class UserMessage(models.Model):
+    username = models.CharField(max_length=120)
+    email = models.EmailField()
+    date_post = models.DateTimeField()
+    text = models.TextField(max_length=600)
 
 # Nadaj nazwę i dodaj models.Model
 # class Event(models.Model):
